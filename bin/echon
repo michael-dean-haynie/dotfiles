@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+# echo but with newline instead of space
+for arg in "$@"
+do
+	echo "$arg"
+done

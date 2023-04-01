@@ -1,0 +1,20 @@
+# ergonomics
+alias reSource='source ~/.zshrc'
+alias reSourceTmux='tmux source-file ~/.tmux.conf'
+
+# display directory trees
+alias ll='ls -al'
+alias lt='tree -a'
+alias lt1='lt -L 1'
+alias lt2='lt -L 2'
+alias lt3='lt -L 3'
+
+# dot-files git setup
+# (https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
+alias dfgit='/usr/bin/git --git-dir=$HOME/.dfgit/ --work-tree=$HOME'
+
+# functions (used as commands)
+function runccode() {
+	#echo $(gcc $1 -o app | cat);
+	#:&& ./app < $2 ; rm app
+}

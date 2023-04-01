@@ -1,0 +1,28 @@
+" ------------------------------------------------------------ "
+" Splits
+" ------------------------------------------------------------ "
+" Open new split panes to right and bottom, which feels more natural than Vim’s default
+" https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally
+set splitbelow
+set splitright
+
+" Create Splits (sideways, vertical)
+map <leader>s :new<CR>
+map <leader>v :vnew<CR>
+
+
+" Split Navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" ------------------------------------------------------------ "
+" Cursor
+" ------------------------------------------------------------ "
+" Don't let the cursor touch the edge of the viewport
+set scrolloff=5
+
+" ------------------------------------------------------------ "
+" Template Section Header 
+" ------------------------------------------------------------ "

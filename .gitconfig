@@ -1,0 +1,11 @@
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
+[user] # as default, personal needs
+    email = michael.dean.haynie@gmail.com
+    name = Michael Haynie
+[includeIf "gitdir:~/code/bitovi/"] # bitovi needs
+    path = .gitconfig-bitovi
+[includeIf "gitdir:~/code/kfc/"] # kfc needs
+    path = .gitconfig-kfc

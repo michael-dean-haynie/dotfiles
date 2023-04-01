@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export PLATFORM_ENV='qa'
+export AUTH_CLIENT_ID='mys9p5xxuantrmpnw5r6afj8ferugxas'
+export ECOMM_V1_COGNITO_CLIENT_ID='2cmn1samvsmmkklh6akipdabf5'
+export ECOMM_V1_COGNITO_CLIENT_SECRET='14bepv8otufsl60huk1p4fr4tcrcomor934hh7jara261541e17s'
+export PLATFORM_GATEWAY_M2M_CLIENT_ID='o5g08t3vpi1hje617urogrevi'
+export PLATFORM_GATEWAY_M2M_CLIENT_SECRET='15l50sm68v7misnv9rscdvrrstfp2f9vvtr45i6q86oehug8ud7v'
