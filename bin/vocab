@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# replace spaces with "+" for url encoding
+term=$(echo "$1" | tr ' ' '+')
+url="https://google.com/search?q=vocabulary.com+$term"
+
+# open a new app window for chrome, using personal profile
+open -n -a "Google Chrome" "$url" --args --profile-directory="1"
