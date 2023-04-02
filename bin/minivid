@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm ~/Desktop/vid.mp4
+#ffmpeg -i "$1" -s qcif ~/Desktop/vid.mp4
+#ffmpeg -i "$1" -s cif ~/Desktop/vid.mp4
+#ffmpeg -i "$1" -s vga ~/Desktop/vid.mp4
+ffmpeg -i "$1" -vf "scale=-1:720" ~/Desktop/vid.mp4
