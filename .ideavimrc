@@ -16,7 +16,8 @@ map ge <Action>(ShowErrorDescription)
 " (goto definition is gd)
 " goto implementation
 map gi <Action>(ReSharperGotoImplementation)
-
+" goto show intention actions
+map gs <Action>(ShowIntentionActions)
 
 " ------------------------------------------------------------ "
 " NERDTree Support
