@@ -10,7 +10,8 @@ source ~/.zsh/aliases
 #source "/Users/michael/code/tools/emsdk/emsdk_env.sh"
 
 # zsh prompt configuration
-export PROMPT="%Bcadenza%b %1~ %# "
+# export PROMPT="🔥 %Bcadenza%b %1~ %# "
+export PROMPT="🔥 %1~ %# "
 
 # type ahead completion?
 autoload bashcompinit && bashcompinit
