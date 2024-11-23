@@ -30,3 +30,5 @@ export FZF_DEFAULT_COMMAND="find -L . \( -name node_modules -o -name .git \) -pr
 
 # Load Angular CLI autocompletion.
 #source <(ng completion script)
+
+export PATH="/usr/local/Cellar/openssl@3/3.1.3/bin:$PATH"

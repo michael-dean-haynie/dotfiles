@@ -9,21 +9,61 @@ nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 " idea action shortcuts
 " ------------------------------------------------------------ "
 " https://youtrack.jetbrains.com/issue/IDEA-249695/Show-error-messages-in-quick-doc-popup-invoked-by-keyboard-shortcut
-" hover over cursor (not just java, all languages)
+
+" "Quick Documentation" https://jetbrains.com/help/rider/Coding_Assistance__Quick_Documentation.html
+" "go to hover" shows hover popup over cursor (not just java, all languages)
 map gh <Action>(QuickJavaDoc)
-" hover over error (squigglies)
-map ge <Action>(ShowErrorDescription)
-" (goto definition is gd)
-" goto implementation
+
+" "View Problem Description" https://www.jetbrains.com/help/rider/Design_time_Inspection.html#view-problem-description
+" "go to problem description" shows hover popup over error (squiggly)
+map gp <Action>(ShowErrorDescription)
+
+" "Navigate Code Issues" https://www.jetbrains.com/help/rider/Design_time_Inspection.html#2ce59fee
+" "go to next error" moves cursor to the next error in the current file
+map ]e <Action>(GotoNextError)
+
+" "Navigate Code Issues" https://www.jetbrains.com/help/rider/Design_time_Inspection.html#2ce59fee
+" "go to previous error" moves cursor to the previous error in the current file
+map [e <Action>(GotoPreviousError)
+
+" "go to next member" moves cursor to the next class/member in the current file
+map ]m <Action>(MethodDown)
+
+" "go to previous member" moves cursor to the previous class/member in the current file
+map [m <Action>(MethodUp)
+
+" "Go to Declaration or Usages" https://www.jetbrains.com/help/rider/Navigation_and_Search__Go_to_Declaration.html
+" "go to declaration" navigate to the declaration of a symbol
+map gd <Action>(GotoDeclaration)
+
+" "Go to Implementation" https://www.jetbrains.com/help/resharper/Navigation_and_Search__Go_to_Implementation.html
+" "go to implementation" navigate the the implementation or show popup of implementations of an abstract symbol
 map gi <Action>(ReSharperGotoImplementation)
-" goto show intention actions
-map gs <Action>(ShowIntentionActions)
+
+" "Go to Usages of Symbol" https://www.jetbrains.com/help/rider/Navigation_and_Search__Go_to_Usage.html
+" "go to usages" shows usages of symbol in popup, or navigates to single usage
+map gu <Action>(ShowUsages)
+
+" "Go to Type Declaration" https://www.jetbrains.com/help/rider/Navigation_and_Search__Go_to_Type_Declaration.html
+" "go to type" navigates to the declaration of the type of a symbol 
+map gt <Action>(GotoTypeDeclaration)
+
+" "Intention actions" https://www.jetbrains.com/help/idea/intention-actions.html
+" "go to actions" shows a popup with intention actions for symbol or highlighted line
+map ga <Action>(ShowIntentionActions)
 
 " ------------------------------------------------------------ "
 " NERDTree Support
 " https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 " ------------------------------------------------------------ "
 set NERDTree
+
+" ------------------------------------------------------------ "
+" vim-surround Support
+" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
+" ------------------------------------------------------------ "
+set surround
+
 " ------------------------------------------------------------ "
 " Load shared configuration
 " ------------------------------------------------------------ "

@@ -10,12 +10,25 @@ set splitright
 map <leader>s :new<CR>
 map <leader>v :vnew<CR>
 
-
 " Split Navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" ------------------------------------------------------------ "
+" Insert New lines without indentation (stay in normal mode)
+" ------------------------------------------------------------ "
+" these ones move the cursor? (shouldn't...)
+map go m`o<Esc>0"_D``
+map gO m`O<Esc>0"_D``
+
+
+" these ones don't move the cursor but rider's auto indent makes using u to
+" undo kinda a pain
+"map go m`A<Enter><Esc>`` 
+"map gO m`I<Enter><Esc>``
+
 
 " ------------------------------------------------------------ "
 " Cursor
