@@ -72,8 +72,8 @@ source ~/.vim/.sharedvimrc
 " ------------------------------------------------------------ "
 " Cheat Sheet (Jetbrains hotkeys too)
 " ------------------------------------------------------------ "
-" Cycle forward through tabs: CMD+SHIFT+]
-" Cycle backward through tabs: CMD+SHIFT+[
+" Cycle forward through tabs: CMD+SHIFT+] (on mac) ALT+RIGHT (on windows)
+" Cycle backward through tabs: CMD+SHIFT+[ (on mac) ALT+LEFT (on windows)
 
 " Jump to left split: CTRL+h
 " Jump to right split: CTRL+l
