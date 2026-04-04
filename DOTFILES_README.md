@@ -1,5 +1,7 @@
 # dotfiles
 
+## UPDATE - NOT WORTH MAINTAINING, NOW JUST A REFERENCE FOR DOTFILES - MANUAL INSTALLATION EXPECTED
+
 ## Approach
 
 https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
