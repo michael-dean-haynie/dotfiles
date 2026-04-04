@@ -1,7 +1,8 @@
 # --- Feature Flags ----------------------------- #
-typeset -r FEATURE_PROMPT=fireDirUser      # default | fire | fireDirUser | firePathUser | nlPathNlFireUser 
-typeset -r FEATURE_VI_MODE=true            # true | false
-typeset -r FEATURE_ZSH_SYNTAX_HL=true      # true | false
+typeset FEATURE_PROMPT=fireDirUser      # default | fire | fireDirUser | firePathUser | nlPathNlFireUser 
+typeset FEATURE_VI_MODE=true            # true | false
+typeset FEATURE_ZSH_SYNTAX_HL=true      # true | false
+typeset FEATURE_FZF=true                # true | false
 
 # --- FEATURE_PROMPT   -------------------------- #
 if [[ $FEATURE_PROMPT == fire ]]; then
@@ -23,6 +24,11 @@ if $FEATURE_VI_MODE; then
 
   # 3rd party lib for vi mode (more full-featured
   source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+fi
+
+# --- FEATURE_FZF   ----------------------------- #
+if $FEATURE_FZF; then
+  source <(fzf --zsh) # fzf shell integration
 fi
 
 # --- Aliases ------------------------------------ #
