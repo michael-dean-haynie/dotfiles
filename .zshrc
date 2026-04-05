@@ -19,15 +19,24 @@ fi
 
 # --- FEATURE_VI_MODE   -------------------------- #
 if $FEATURE_VI_MODE; then
-  # built-in vi mode (kinda lame)
-  # bindkey -v
-
-  # 3rd party lib for vi mode (more full-featured
-  source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+  # built-in vi mode (kinda lame but doesn't conflict with fzf)
+  bindkey -v
 fi
 
 # --- FEATURE_FZF   ----------------------------- #
 if $FEATURE_FZF; then
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+                                                                                                                                                                                                                                                              
+  # For path completion (files) - e.g. vim **<TAB>
+  _fzf_compgen_path() {                                                                                                                                                                                                                                       
+    fd --hidden --follow --exclude .git . "$1"
+  }                                                                                                                                                                                                                                                           
+   
+  # For directory completion - e.g. cd **<TAB>                                                                                                                                                                                                                
+  _fzf_compgen_dir() {
+    fd --type d --hidden --follow --exclude .git . "$1"                                                                                                                                                                                                       
+  }
+
   source <(fzf --zsh) # fzf shell integration
 fi
 
@@ -35,7 +44,6 @@ fi
 alias n=nvim
 alias nv=nvim
 alias k=kubectl
-alias p=python3
 
 # --- Node Version Manager   --------------------- #
 export NVM_DIR="$HOME/.nvm"
