@@ -104,10 +104,13 @@ if vim.g.vscode then
   -- ── Code Navigation (supplements vscode-neovim built-ins) ──────
   -- Built-in: gd (definition), gD (peek def), gh/K (hover),
   --           gf (declaration), gO (file symbols), gH (references)
+  --           TODO: add ones for adding/removing lines without ending up in insert mode or even moving cursor
+  --           TODO: shift tab should un-indent
   map("n", "<Leader>d",     function() vscode.action("editor.action.revealDefinition") end, { desc = "Go to definition" })
   map("n", "<Leader>D",     function() vscode.action("editor.action.revealDeclaration") end, { desc = "Go to declaration" })
   map("n", "<Leader>h",     function() vscode.action("editor.action.showHover") end, { desc = "Hover" })
   map("n", "<Leader>p",     function() vscode.action("editor.action.triggerParameterHints") end, { desc = "Trigger Parameter Hints" })
+  map("n", "<Leader>f",     function() vscode.action("editor.action.quickFix") end, { desc = "Code action / quick fix" })
   -- map("n", "gr",         function() vscode.action("editor.action.goToReferences") end, { desc = "Go to references" })
   -- map("n", "gi",         function() vscode.action("editor.action.goToImplementation") end, { desc = "Go to implementation" })
   -- map("n", "gy",         function() vscode.action("editor.action.goToTypeDefinition") end, { desc = "Go to type definition" })
